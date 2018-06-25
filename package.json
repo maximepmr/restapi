@@ -1,0 +1,16 @@
+{
+  "name": "Rest Api test",
+  "version": "0.0.0",
+  "description": "API test for malt project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "PORT=8080 node server.js",
+    "dev": "NODE_ENV=test PORT=4205 nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  }
+}

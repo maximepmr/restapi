@@ -1,0 +1,41 @@
+Pour lancer le serveur :
+
+npm install
+node server.js
+
+Pour changer l'adresse de la bdd :
+models/dbconnection
+
+le script à lancer pour créer la table :
+CREATE TABLE `customer` (
+	`Id` INT(11) NOT NULL AUTO_INCREMENT,
+	`Name` VARCHAR(255) NOT NULL,
+	`Address` VARCHAR(255) NOT NULL,
+	`Country` VARCHAR(100) NOT NULL,
+	`Phone` INT(10) NOT NULL,
+	`Created_on` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`Updated_on` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (`Id`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=2
+;
+
+INSERT INTO `customer` (`Id`, `Name`, `Address`, `Country`, `Phone`, `Created_on`, `Updated_on`) VALUES (1, 'aaaa', 'bbbb', 'ccc', 52555225, '2018-06-24 18:19:54', '2018-06-24 16:19:55');
+
+
+Exemple :
+
+Pour récupérer tous les customer :
+http://localhost:3000/customer
+
+Pour récupérer un customer avec son id :
+http://localhost:3000/customer/1
+
+Voilà après il faut faire des requêtes post / put / delete
+
+J'ai pris la bdd sur internet mais je peux le faire avec n'importe quelle structure de bdd.
+
+Voilà une organisation simple. Si jamais plusieurs table je peux séparer les routes pour chaque table.
+
